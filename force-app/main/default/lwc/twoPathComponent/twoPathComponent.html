@@ -1,3 +1,21 @@
 <template>
-    
+    <!-- Path 1 -->
+    <template if:true={isPath1Visible}>
+        <lightning-progress-indicator type="path" current-step={currentPath1Value} class="slds-m-bottom_medium">
+            <template for:each={path1Steps} for:item="step">
+                <lightning-progress-step key={step.value} label={step.label} value={step.value}></lightning-progress-step>
+            </template>
+        </lightning-progress-indicator>
+    </template>
+
+    <br>
+
+    <!-- Path 2 -->
+    <template if:true={isPath2Visible}>
+        <lightning-progress-indicator type="path" current-step={currentPath2Value} class="slds-m-bottom_medium">
+            <template for:each={path2Steps} for:item="step">
+                <lightning-progress-step key={step.value} label={step.label} value={step.value}></lightning-progress-step>
+            </template>
+        </lightning-progress-indicator>
+    </template>
 </template>

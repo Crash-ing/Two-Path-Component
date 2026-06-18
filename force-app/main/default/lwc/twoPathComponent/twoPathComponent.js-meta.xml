@@ -5,24 +5,24 @@
     <masterLabel>Two Path Component</masterLabel>
     <description>A custom path component showing up to two configurable picklist paths.</description>
 
-    // Define where the component can be used in the Lightning Experience
+    <!-- Define where the component can be used in the Lightning Experience -->
     <targets>
         <target>lightning__RecordPage</target>
         <target>lightning__AppPage</target>
         <target>lightning__HomePage</target>
     </targets>
 
-    // Configuration for the component properties in different contexts (record page, app page, home page)
+    <!-- Configuration for the component properties in different contexts (record page, app page, home page) -->
     <targetConfigs>
         <targetConfig targets="lightning__RecordPage,lightning__AppPage,lightning__HomePage">
-            // Path 1 properties
+            <!-- Path 1 properties -->
             <property name="path1ObjectApiName" type="String" label="Path 1: Object API Name" description="Account, Opportunity, etc." />
             <property name="path1FieldApiName" type="String" label="Path 1: Picklist Field API Name" description="StageName, Status, etc." />
             <property name="path1RecordId" type="String" label="Path 1: Specific Record ID" description="Leave blank to use the current page record." />
             <property name="path1LookupFieldApiName" type="String" label="Path 1: Lookup Field API Name" description="If specified, takes picklist from parent record." />
             <property name="path1RecordTypeId" type="String" label="Path 1: Record Type ID" description="Optional. Needed if picklist values depend on Record Type." />
 
-            // Path 2 properties
+            <!-- Path 2 properties -->
             <property name="path2ObjectApiName" type="String" label="Path 2: Object API Name" description="Account, Opportunity, etc." />
             <property name="path2FieldApiName" type="String" label="Path 2: Picklist Field API Name" description="StageName, Status, etc." />
             <property name="path2RecordId" type="String" label="Path 2: Specific Record ID" description="Leave blank to use the current page record." />
